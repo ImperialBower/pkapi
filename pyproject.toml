@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "grpcio-tools>=1.62"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pkapi"
+version = "0.1.0"
+description = "Protocol Buffer API stubs for the PK Engine Dealer service"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "grpcio>=1.62",
+    "protobuf>=4.25",
+]
+
+[project.optional-dependencies]
+dev = [
+    "grpcio-tools>=1.62",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
