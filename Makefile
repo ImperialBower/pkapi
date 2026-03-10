@@ -6,7 +6,7 @@ PROTO_FILE     := pkdealer/dealer/v1/dealer.proto
 
 ## Generate Python gRPC stubs from the proto file
 gen:
-	python -m grpc_tools.protoc \
+	uv run python -m grpc_tools.protoc \
 		--proto_path=$(PROTO_SRC_DIR) \
 		--python_out=$(PROTO_OUT_DIR) \
 		--grpc_python_out=$(PROTO_OUT_DIR) \
@@ -14,7 +14,7 @@ gen:
 
 ## Install runtime and development dependencies
 install:
-	pip install -e ".[dev]"
+	uv sync --extra dev
 
 ## Remove generated Python stub files
 clean:
