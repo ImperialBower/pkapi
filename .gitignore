@@ -1,3 +1,7 @@
+# Generated Protocol Buffer stubs (run `make gen` to regenerate)
+*_pb2.py
+*_pb2_grpc.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
